@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>默认参数</title>
+</head>
+<body>
+	
+</body>
+<script>
+	// function test(x) {
+	// 	x = x || '默认值'
+	// 	console.log(x);
+	// }
+	// test(null);
+
+
+	// //对传入值是否是undefined进行判断
+	
+	// function test1(x) {
+	// 	var a = Object.prototype.toString.call(x)
+	// 	console.log(a);
+	// 	if(a === '[object Undefined]') {
+	// 		console.log('默认值');
+	// 	} else {
+	// 		console.log(x);
+	// 	}
+
+	// 	// if()
+	// }
+	// test1(-0);
+	// 
+	
+	// function test2(x = '默认值') {
+	// 	console.log(x);
+	// }
+	// test2();
+
+
+	// let x = 99;
+	// function foo(p = x + 1) {
+	// 	console.log(p);
+	// }
+	// foo();	//100
+	// x = 100;
+	// foo();	//101
+
+
+	function add(...values){
+		let sum = 0;
+		for(var val of values){
+			sum += val;
+		}
+		return sum;
+	}
+
+	const a = add(1,2,3,4);
+	console.log(a);
+</script>
+</html>

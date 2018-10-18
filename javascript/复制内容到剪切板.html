@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<!-- <input type="text" value="https://www.baidu.com" id="input"> -->
+	<input onclick="oCopy(this)" value="你好.要copy的内容!">
+</body>
+<!-- <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script> -->
+<script>
+	
+	//实现复制,剪切必须有事件, 比如btn点击复制
+	//
+	
+	// var input = document.getElementById('input');
+	// console.log(input);
+	// input.select();
+	// // // document.execCommand("Copy");
+	// var js = input.createTextRange();
+	//  js.execCommand('Copy');
+	
+	
+	// function copy() {
+	// 	let oInput = document.createElement('input');
+ //        oInput.value = "xxxxxxx";
+ //        document.body.appendChild(oInput);
+ //        oInput.select(); // 选择对象
+ //        console.log(document.execCommand("Copy")); // 执行浏览器复制命令
+	// }
+	// copy();
+
+
+	 function copy() {
+        let oInput = document.createElement('textarea');
+        oInput.value = "xx222333xx";
+        document.body.appendChild(oInput);
+        oInput.select(); // 选择对象
+        document.execCommand("Copy"); // 执行浏览器复制命令
+        oInput.style.display='none';
+        // alert('复制成功');
+    }
+
+
+
+
+function oCopy(obj){
+  obj.select();
+  js=obj.createTextRange();
+  js.execCommand("Copy")
+  alert("复制成功!");
+}
+</script>
+</html>

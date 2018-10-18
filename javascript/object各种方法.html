@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>object</title>
+</head>
+<body>
+	
+</body>
+<script>
+	// const person = {
+	// 	isHuman: false,
+	// 	printIntroduction: function() {
+	// 		console.log(`my name is ${this.name}.Am I human? ${this.isHuman}`);
+	// 	}
+	// }
+	// const me = Object.create(person);
+	// me.name = 'Any';
+	// me.isHuman = true;
+	// me.printIntroduction();  //my name is Any.Am I human? true
+
+	var obj = {};
+	Object.defineProperties(obj, {
+	  'property1': {
+	    value: true,
+	    writable: true
+	  },
+	  'property2': {
+	    value: 'Hello',
+	    writable: false
+	  }
+	  // etc. etc.
+	});
+	console.log(obj);
+
+
+	const object2 = { 0: 'a', 1: 'b', 2: 'c' };
+	console.log(Object.entries(object2)[2]);
+
+</script>
+</html>

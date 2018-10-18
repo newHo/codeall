@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div>
+		<a href="https://www.baidu.com">跳转百度</a>
+	</div>
+</body>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script>
+	
+// $(document).ready(function(e) { 
+//     var counter = 0;
+//     if (window.history && window.history.pushState) {
+//          $(window).on('popstate', function () {
+//                 window.history.pushState('forward', null, '#');
+//                 window.history.forward(1);
+//               	alert("不可回退");
+//             });
+//       }
+
+//       window.history.pushState('forward', null, '#'); //在IE中必须得有这两行
+//       window.history.forward(1);
+
+
+	// var detectBack = {
+
+ //        initialize: function() {
+ //            //监听hashchange事件
+ //            window.addEventListener('hashchange', function() {
+ //            	console.log(111);
+ //                //为当前导航页附加一个tag
+ //                this.history.replaceState('hasHash', '', '');
+
+ //            }, false);
+
+ //            window.addEventListener('popstate', function(e) {
+
+ //                if (e.state) {
+ //                    //侦测是用户触发的后退操作, dosomething
+ //                    //这里刷新当前url
+ //                    this.location.reload();
+ //                }
+ //            }, false);
+ //        }
+ //    }
+
+ //    detectBack.initialize();  
+
+
+    window.onpopstate = function(event) { 
+        console.log(sfa);
+    };  
+	    //加入以下俩行代码，才能触发 
+	 window.history.pushState('forward', null, '#'); 
+	 window.history.forward(1);
+</script>
+</html>
