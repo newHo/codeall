@@ -1,0 +1,26 @@
+<view class="container">
+  <image src="{{isPlayMusic ? postData.music.bgUrl : postData.img}}" class="head-image"></image>
+  <image src="{{isPlayMusic ? '/images/end.png' : '/images/start.png'}}" class="audio" catchtap="onMusicTap"></image>
+  <view class="icon_wrapper">
+    <view wx:if="{{collected}}">
+      <image src="/images/heartConfirm.png" class="iconStyle" catchtap="onCollected"></image>
+    </view>
+    <view wx:else>
+      <image src="/images/heartCancel.png" class="iconStyle" catchtap="onCollected"></image>    
+    </view>
+    <view>  
+       <image src="/images/share.png" class="iconStyle" bindtap="onShareTap"></image>
+    </view>
+  </view>
+
+  <view class="author-date">
+    <text class="author">{{postData.author}}</text>
+    <!-- <text class="date" catchtap="onDateTap">发布于{{postData.dateTime}}天前</text> -->
+    <text class="date" >发布于{{postData.dateTime}}天前</text>
+  </view>
+  <view class="title">
+    <text >{{postData.detail}}</text>
+  </view>
+  
+  
+</view>

@@ -1,0 +1,24 @@
+<import src='movie_list/movie_list.wxml' />
+<import src="movie-grid/movie-grid-template.wxml" />
+<view class="search">
+  <icon type="search" size="13" color="#405f80" class="search-img"></icon>
+  <input type="text" placeholder='你的名字/西虹市首富' placeholder-class="placeholder" bindfocus="onBindFocus" bindconfirm="onbindConfirm"></input>
+  <image src="/images/close.png" class="xx-img" bindtap="onCancelImgTap" wx:if="{{searchPanelShow}}"></image>
+  <!-- <icon type="cancel" bindtap="onCancelImgTap" class="xx-img"></icon> -->
+</view>
+
+<view class="container" wx:if="{{containerShow}}">
+  <view class="movies-template">
+    <template is="movieListTemplate" data="{{...inTheates}}" />
+  </view>
+  <view class="movies-template">
+    <template is="movieListTemplate" data="{{...comingSoon}}" />
+  </view>
+  <view class="movies-template">
+    <template is="movieListTemplate" data="{{...top250}}" />
+  </view>
+</view>
+
+<view class="search-panel" wx:if="{{searchPanelShow}}">
+  <template is="movieGridTemplate" data="{{...searchResult}}" />
+</view>
