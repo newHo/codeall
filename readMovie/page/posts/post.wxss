@@ -1,0 +1,11 @@
+/* page/posts/post.wxss */
+@import'post-item/page-item-template.wxss';
+swiper{
+  width:100%;
+  height:200px;
+}
+swiper image{
+  width:100%;
+  height:200px;
+}
+

@@ -1,0 +1,33 @@
+{
+  "pages": [
+    "page/welcome/welcome",
+    "page/posts/post",
+    "page/posts/post-detail/post-detail",
+    "page/movies/movies",
+    "page/movies/more-movie/more-movie",
+    "page/movies/movie-detail/movie-detail"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#b3d4db"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "page/posts/post",
+        "text": "阅读",
+        "iconPath": "/images/read.png",
+        "selectedIconPath": "/images/read_select.png"
+      },
+      {
+        "pagePath": "page/movies/movies",
+        "text": "电影",
+        "iconPath": "/images/movie.png",
+        "selectedIconPath": "/images/movie_select.png"
+      }
+    ],
+    "borderStyle": "white",
+    "backgroundColor": "#fff",
+    "color": "#000",
+    "selectedColor": "#3299cc"
+  }
+}
