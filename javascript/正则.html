@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>正则</title>
+</head>
+<body>
+	
+</body>
+<script>
+	// var str = " The colors of the rainbow have many colours and the rainbow does not  have a single colour."
+	// var reg = /colou?rs?/g;
+	// var result = str.match(reg);
+	// console.log(result);
+
+	// var str2 = 'This is somthing is about a blah words sequence of words Hello and GoodBye and Go gogo!';
+	// var reg2 = /\b\w{5}\b/g;
+	// // var result2 = str2.match(reg2);
+	// var result2 = reg2.exec(str2);
+	// console.log(result2);
+
+	// var tel3 = "These are some phone numbers 915-134-3122. Also,you can call me at 643.123.1333 and of course,I'm always reachable at (212)867-5509";
+	// var reg3 = /\(?\d{3}[-.)]\d{3}[-.]\d{4}/g;
+	// var result3 = tel3.match(reg3);
+	// console.log(result3);
+
+	// var str4 = "gaoyaqi411@126.com dyumc@google.net sam@sjtu.edu vincent.ko@126.com";
+	// var reg4 = /[\w.]+@\w+\.(com|net|edu)/g;
+	// var result4 = str4.match(reg4);
+	// console.log(result4);
+
+
+	
+	// var str5 = "212-555-1234 915-412-1333";
+	// var reg5 = /\(?(\d{3})[-.)]\d{3}[-.]\d{4}/;
+	// var result5 = str5.match(reg5);
+	// console.log(result5);
+	
+	// var str6 = 'hello';
+	// var reg6 = /\w+/;
+	// var result6 = reg6.test(str6);
+	// var r1 = str6.match(reg6);
+	// console.log(result6);
+	// console.log(r1);
+
+
+	// var r = /compus/;
+	// var reg = /\w+/;
+	// var s = "compus, I know something about you";
+	// console.log(r.test(s));  //true
+	// console.log(s.match(r));  //["compus"]
+	// console.log(s.match(reg)); //["compus"]
+
+	// var str = "Here is a Phone Number 111-2313 and 133-2311";
+
+	// var sr = /(\d{3})[-.](\d{4})/;
+
+	// var srg = /(\d{3})[-.]\d{4}/g
+
+	// console.log(str.match(sr)); //["111-2313","111"]
+	// console.log(str.match(srg)); //["111-2313","133-2311"]
+
+
+	// var str = "Here is a Phone Number 111-2313 and 133-2311" ;
+	// var srg = /(\d{3})[-.]\d{4}/g;
+	// var result = srg.exec(str);
+	// while(result !== null) {
+	//     console.log(result);
+	//     result = srg.exec(str);
+	// }
+
+
+	// var s = "unicorns and rainbows And, Cupcakes"
+	// var result1 = s.split(/\s/);
+	// console.log(result1);	// ["unicorns", "and", "rainbows", "And,", "Cupcakes"]
+
+	// var result2 = s.split(/[,\s]/);
+	// console.log(result2);	//["unicorns", "and", "rainbows", "And", "", "Cupcakes"]
+
+	// var result3 = s.split(/[,\s]+/);
+	// console.log(result3);	//["unicorns", "and", "rainbows", "And", "Cupcakes"]
+
+
+	// var s = "Hello,My name is Vincent.";
+	// var reg = /([aeiou])/g;
+	// var result = s.replace(reg,"$1$1");
+	// console.log(result);	//"Heelloo,My naamee iis Viinceent."
+
+
+	// var s = "Hello,My name is Vincent. What is your name?"
+	// var newStr = s.replace(/\b\w{4}\b/g,replacer)
+	// console.log(newStr)		//Hello,My NAME is Vincent. WHAT is YOUR NAME?
+
+	// function replacer(match,group1,group2) {
+	//     console.log(match);		//name What your name
+	//     console.log(group1);
+	//     console.log(group2);
+	//     return match.toUpperCase();
+	// }
+
+
+	//判断一个字符串中次数最多的字符,并统计次数
+	var s = 'aaabbbcccaaabbbaaa';
+
+	var a = s.split('').sort().join(""); // //"aaaaaaaaabbbbbbccc"
+
+	var ans = a.match(/(\w)\1+/g);
+	console.log(ans);	//["aaaaaaaaa", "bbbbbb", "ccc"]
+	ans.sort(function(a,b) {
+	    return a.length - b.length;
+	})
+	console.log(ans);	//["ccc", "bbbbbb", "aaaaaaaaa"]
+	console.log('ans is:' + ans[ans.length - 1]);	//ans is:aaaaaaaaa
+	console.log(ans[ans.length-1].length);	//9
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</html>

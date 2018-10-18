@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>this</title>
+</head>
+<body>
+	
+</body>
+<script>
+	// function identify() {
+	// 	console.log(this)
+	// 	console.log("Hello,I'm "+this.name)
+	// }
+	// let me = {
+	// 	name : 'kyle'
+	// }
+	// identify.call(me)
+	// 
+
+//默认绑定: 非严格模式指向全局对象,严格模式指向undefined
+	// function foo() {
+	// 	console.log(this.a)
+	// }
+	// var a = 2;
+	// foo()
+
+	// function foo2() {
+	// 	"use strict";
+	// 	console.log(this.a);
+	// 	// foo()
+	// }
+	// foo2();
+
+
+//隐式绑定
+
+	// function foo(){
+	// 	console.log(this.a)
+	// }
+
+	// var a = "Oops, global";
+	// let obj2 = {
+	// 	a : 1,
+	// 	foo : foo
+	// };
+	// let obj1 = {
+	// 	a : 22,
+	// 	obj2 : obj2
+	// };
+	// obj2.foo();		//1
+	// obj1.obj2.foo();	//1
+
+	// //隐式绑定丢失
+	// let bar = obj2.foo;
+	// bar();
+
+
+	// function foo() {
+	// 	return () => {
+	// 		console.log(this.a);
+	// 	}
+	// }
+
+	// let obj1 = {
+	// 	a : 2
+	// }
+	// let obj2 = {
+	// 	a : 22
+	// }
+
+	// let bar = foo.call(obj1);
+	// console.log(bar);
+	
+	// bar.call(obj2);
+	// 
+	
+	console.log({} == {});
+
+</script>
+</html>

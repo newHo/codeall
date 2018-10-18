@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>类型转换</title>
+</head>
+<body>
+	
+</body>
+<script>
+	// '' + {toString:()=>'S',valueOf:()=>'J'} ;
+	// 
+	
+	// console.log(~~4.9 === 4);
+	
+	// console.log(void 0);
+	// let c = null; 
+	// //undefined  -0  flase  0  null 
+
+	// let a = c && 2;
+	// console.log(a);
+	// 
+	
+
+
+	// func = (l, m = 3, n = 4 ) => (l * m * n);
+	// func(2)             //output: 24
+
+
+	// const numbers = [10,20,30,40];
+	// const doubleOver50 = numbers.reduce((finalList, num) => {
+	// 	num = num * 2;
+	// 	if(num > 50) {
+	// 		finalList.push(num);
+	// 	}
+	// 	return finalList;
+	// },[])
+	// console.log(doubleOver50);		//[ 60, 80]
+
+
+	// //数组中重复出现个数
+	// var cars = ['BMW','Benz', 'Benz', 'Tesla', 'BMW', 'Toyota'];
+	// var carsObj = cars.reduce(function(obj, name) {
+	// 	console.log(++obj[name]);
+	// 	obj[name] = obj[name] ? ++obj[name] : 1;
+	// 	return obj;
+	// },{})
+	// console.log(carsObj);
+
+	// async function timeout() {
+	//     return 'hello world'
+	// }
+	// timeout().then(result => {
+	//     console.log(result);
+	// })
+	// console.log(timeout());
+	// console.log('虽然在后面，但是我先执行');
+
+
+	// function double(num) {
+	// 	return new Promise((resolve, reject) => {
+	// 		setTimeout(() => {
+	// 			resolve(2 * num)
+	// 		}, 2000)
+	// 	})
+	// }
+
+	// async function testResult() {
+	// 	let result = await double(30);
+	// 	console.log(result);
+	// }
+	// testResult();
+	// 
+	
+
+	// const csvFileLine = '1997,John Doe,US,john@doe.com,New York';
+	// const { 2: country, 4: state } = csvFileLine.split(',');
+
+	// console.log(country);
+	// console.log(state);
+// country			// US
+// state			// New Yourk
+
+	let {_internal, tooBig, ...cleanObject} = {el1: '1', _internal:"secret", tooBig:{}, el2: '2', el3: '3'};
+
+	console.log(cleanObject);                         // {el1: '1', el2: '2', el3: '3'}
+
+</script>
+</html>

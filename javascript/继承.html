@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            display: flex;
+        }
+        .left{
+            height:100px;
+            background-color: aqua;
+            /* flex-grow: 1; */
+            width: 100%;
+        }
+        .right{
+            width:300px;
+            height:100px;
+            background-color: bisque;
+            
+        }
+        span{
+            display: flex;
+            justify-content: center;
+        }
+
+        .triangle{
+            width: 0;
+            height: 0;
+            border-width:0 30px 30px;
+            border-style:solid;
+            border-color:transparent #333 transparent ;
+            margin: 40px;
+            position: relative;
+
+        }
+    </style>
+</head>
+<body>
+    <!-- <div class="box">
+        <div class="left"></div>
+        <div class="right">
+          <span>33</span>  
+        </div>
+    </div> -->
+    <div class="triangle">
+
+    </div>
+</body>
+<script>
+//    setTimeout(function(){
+//        console.log(1)
+//    },0)
+//    new Promise(function(a, b){
+//        console.log(2);
+//        for(var i = 0; i< 10; i++) {
+//            i == 9 && a();
+//        }
+//        console.log(3);
+//    }).then(function(){
+//        console.log(4);
+//    })
+//    console.log(5);
+
+   //2 3 5 4 1
+
+
+    // function Foo() {
+    //     getName = function(){
+    //         console.log(1);
+    //     }
+    //     return this;
+    // }
+
+    // Foo.getName = function(){
+    //     console.log(2);
+    // }
+    // Foo.prototype.getName = function() {
+    //     console.log(3);
+    // }
+    // var getName = function() {
+    //     console.log(4);
+    // }
+    // function getName() {
+    //     console.log(5);
+    // }
+
+    // Foo.getName();      //2
+    // getName();          //4
+    // Foo().getName();    //1
+    // getName();          //  1
+    // new Foo.getName();      //2
+    // new Foo().getName();    //  3
+    // new new Foo().getName();    //3
+
+
+
+    // var arr = [1,2,3,4,5,6,7,8,9,10];
+    //     // arr.sort(function(a,b){
+    //     //     return b - a;
+    //     // });
+
+    // arr.sort(function(){
+    //     return Math.random()-0.5;
+    // })
+    // console.log(arr)
+
+</script>
+</html>

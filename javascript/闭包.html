@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+<script>
+	 function sum(x, y) {
+	 	console.log(x + y);
+	 }
+	 // setTimeout(sum, 1000, 1, 2);
+
+	 // for(var i = 0; i <= 5; i++) {
+	 // 	setTimeout(function(j){
+	 // 		console.log(j)
+	 // 	},1000,i)
+	 // }
+
+
+	 // let a = {
+	 // 	age : 1
+	 // }
+	 // let b = Object.assign({}, a)
+	 // a.age = 2;
+	 // console.log(b.age);
+
+	 // let a = {
+	 // 	age : 1
+	 // }
+	 // let c = {...a};
+	 // a.age = 3;
+	 // console.log(c.age);
+
+
+	 // let a = {
+	 // 	age: 1,
+	 // 	jobs: {
+	 // 		first: 'Fe'
+	 // 	}
+	 // }
+	 // let b = {...a};
+	 // a.jobs.first = 'native';
+	 // console.log(b.jobs.first);
+
+	 // let c = JSON.parse(JSON.stringify(a));
+	 // a.jobs.first = 'native';
+	 // console.log(c.jobs.first);
+
+
+
+	 // let obj = {
+	 // 	a:1,
+	 // 	b: {
+	 // 		c: 2,
+	 // 		d: 3
+	 // 	}
+	 // }
+	 // obj.c = obj.b;
+	 // obj.e = obj.a;
+	 // obj.b.c = obj.c;
+	 // obj.b.d = obj.b;
+	 // obj.b.e = obj.b.c;
+	 // let newObj = JSON.parse(JSON.stringify(obj));
+	 // console.log(newObj);
+	 // 
+	 
+
+
+	 let a = {
+	 	age: undefined,
+	 	jobs: function(){},
+	 	name: 'ycx'
+	 }
+	 let b = JSON.parse(JSON.stringify(a));
+	 console.log(b);
+</script>
+</html>

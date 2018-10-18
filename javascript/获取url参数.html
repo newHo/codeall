@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+<script>
+	var url = 'https://www.baidu.com/s?rsv_spt=1&rsv_iqid=0xf59cbd9c00042cb8&issp=1&f=3&rsv_bp=0&rsv_idx=2';
+
+	var theRequest = {};
+	if(url.indexOf('?') != -1) {
+		var str = url.split('?')
+		var strs = str[1].split('&');
+		for(let i = 0; i < strs.length; i++) {
+			var sinStr = strs[i].split('=');
+			theRequest[sinStr[0]] = sinStr[1];
+		}
+
+		console.log(theRequest);
+	}
+
+
+
+
+
+</script>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>题</title>
+</head>
+<body>
+	
+</body>
+<script>
+// 	var arr1 = 'join'.split('');
+// 	var arr2 = arr1.reverse();
+// 	var arr3 = 'jones'.split('');
+// 	arr2.push(arr3);
+// 	console.log(arr1)
+// 	console.log(arr2)
+// 	console.log(arr3)
+
+// console.log("array 1: length=" + arr1.length + " last=" + arr1.slice(-1));
+// //
+// console.log("array 2: length=" + arr2.length + " last=" + arr2.slice(-1));
+//
+
+// console.log(1 + '2' + '2');			//122
+// console.log(1 +  + '2' + '2');		//32
+// console.log(1 +  - '1' + '2');		//02
+// console.log(+'1' + '1' + '2');		// 112
+// console.log('A' - 'B' + '2');		//NaN 应该是 NaN2
+// console.log('A' - 'B' + 2);			//NaN
+
+
+	// var a={},
+	//     b={key:'b'},
+	//     c={key:'c'};
+
+	// a[b]=123;
+	// a[c]=456;
+
+	// console.log(a[b]);	//456
+
+ // console.log(Object.prototype.toString(b));
+
+
+ //回文数
+
+ // function check(str) {
+ // 	str = str.replace(/\w/g, '').toLowerCase();
+ // 	return str === str.split('').reverse().join();
+ 
+ // var a = check('121');
+ // console.log(a);
+
+
+// var a = 0,b = 0;
+// function A() {
+// 	A = function() {
+// 		console.log(a+b++)
+// 	}
+// 	console.log(a++)
+// }
+// A(1)
+// A(2)
+
+
+let arr = [
+    {
+        "name": "bob",
+        "age": 20
+    },
+    {
+        "name": "jane",
+        "age": 21
+    },
+    {
+        "name": "joe",
+        "age": 22
+    }
+]
+
+// const getAge = name => (arr.find(value => (value.name === name)).age);
+
+// console.log(getAge('jane'));
+ 
+
+ // const a = name => (arr.filter(value => (value.name === name)).age);
+
+ const a = name => (arr.filter(function(value){
+ 	if(value.name == name) {
+ 		console.log(value);
+ 		return value;
+ 	}
+ }))
+ console.log(a('bob'));
+</script>
+</html>
