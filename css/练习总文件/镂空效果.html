@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>镂空优惠券</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            width: 100vw;
+            height:100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .bg{
+            background: url(https://sp-webfront.skypixel.com/skypixel/v2/public/website/assets/1535027674204-f6eca6369ec03e70262b58b0e25cda7b.jpg);
+            background-size: cover;
+            position: fixed;
+            top:-20px;
+            left:-20px;
+            right: -20px;
+            bottom: -20px;
+            z-index:-1;
+            filter: blur(10px);
+        }
+        .mask{
+            width:340px;
+            height:196px;
+            animation: move 40s infinite;
+            background-image: url(https://sp-webfront.skypixel.com/skypixel/v2/public/website/assets/1535027674204-f6eca6369ec03e70262b58b0e25cda7b.jpg);
+            background-size: cover;
+            mask-image: url(http://static.w3ctrain.com/upload_cae6fcb079f57792a47202cb67bbc04a-dji-seeklogo.com.svg);
+            mask-size: cover;
+            -webkit-mask-image: url(http://static.w3ctrain.com/upload_cae6fcb079f57792a47202cb67bbc04a-dji-seeklogo.com.svg);
+            -webkit-mask-size: cover;
+
+        }
+
+        @keyframes move {
+            0%{
+                background-position: 0 0;
+            }
+            50%{
+                background-position: 100% 0;
+            }
+        }
+        .slogan{
+            color:#fff;
+            margin-top: 24px;
+            font-size:36px;
+            font-weight: 400;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg"></div>
+    <div class="mask"></div>
+</body>
+</html>

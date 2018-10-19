@@ -4,7 +4,65 @@
 	<meta charset="UTF-8">
 	<title>Document</title>
 </head>
+<style>
+    .wrapper{
+        width:100vw;
+        height:100vh;
+        background:#999999;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .baymax{
+
+    }
+
+    .head{
+        width:100px;
+        height:60px;
+        border-radius: 50%;
+        background: #fff;
+        position: relative;
+    }
+    .eyes{
+        width:50px;
+        height:2px;
+        background: #000000;
+        position: absolute;
+        top: 23px;
+        left:25px;
+    }
+    .eyes::before{
+        content: '';
+        position: absolute;
+        width:0.7em;
+        height:0.7em;
+        border-radius: 50%;
+        background: #000;
+        top:-3px;
+        box-shadow: 45px 0 0 0 #000;
+    }
+    /*.eyes::after{*/
+        /*content: '';*/
+        /*position: absolute;*/
+        /*width:0.5em;*/
+        /*height:0.5em;*/
+        /*border-radius: 50%;*/
+        /*background: #000;*/
+        /*top:-2px;*/
+        /*left:*/
+    /*}*/
+
+</style>
 <body>
-	
+	<div class="wrapper">
+        <div class="baymax">
+            <div class="head">
+                <div class="eyes"></div>
+            </div>
+
+
+        </div>
+    </div>
 </body>
 </html>

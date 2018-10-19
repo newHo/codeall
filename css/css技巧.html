@@ -1,1 +1,223 @@
-<!doctype html><html lang="en"><head>    <meta charset="UTF-8">    <meta name="viewport"          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">    <meta http-equiv="X-UA-Compatible" content="ie=edge">    <title>Document</title>    <style>        .wrapper{            user-select: none;        }        img:hover {            content: url('./big.jpg');            /*content属性改变的仅仅是视觉呈现*/        }        /*.threeLine{*/            /*display: inline-block;*/            /*width:100px;*/            /*height:10px;*/            /*padding: 35px 0;*/            /*border-color:currentColor;*/            /*border-top:10px solid;*/            /*border-bottom:10px solid;*/            /*background-clip: content-box;*/        /*}*/        .threeLine{            display: inline-block;            width: 140px;            height: 10px;            padding: 35px 0;            border-top: 10px solid;            border-bottom: 10px solid;            background-color: currentColor;            background-clip: content-box;        }        .father{            width:300px;            height:150px;            border:1px solid red;            position: relative;        }        /*居中*/        /*.son {*/            /*background: orange;*/            /*width: 100px;*/            /*height: 100px;*/            /*position: absolute;*/            /*margin:auto;*/            /*top:0;*/            /*bottom:0;*/            /*left:0;*/            /*right:0;*/        /*}*/        /*左右有值margin*/        .son{            width: 100px;            height: 100px;            background-color: orange;            margin-right:50px;            margin-left:auto;        }    </style></head><body>    <div class="father">        <div class="son"></div>    </div>    <!--<div class="wrapper">-->        <!--我是禁止复制文字-->    <!--</div>-->    <!--<img src="./base.png" alt="">-->    <!--<div class="threeLine"></div>--></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        /*.wrapper{*/
+            /*user-select: none;*/
+        /*}*/
+        img:hover {
+            content: url('./big.jpg');
+        }
+        /*.threeLine{*/
+            /*display: inline-block;*/
+            /*width:100px;*/
+            /*height:10px;*/
+            /*padding: 35px 0;*/
+            /*border-color:currentColor;*/
+            /*border-top:10px solid;*/
+            /*border-bottom:10px solid;*/
+            /*background-clip: content-box;*/
+        /*}*/
+
+
+        .threeLine{
+            display: inline-block;
+            width: 140px;
+            height: 10px;
+            padding: 35px 0;
+            border-top: 10px solid;
+            border-bottom: 10px solid;
+            background-color: currentColor;
+            background-clip: content-box;
+        }
+        .father{
+            width:300px;
+            height:150px;
+            border:1px solid red;
+            position: relative;
+        }
+        /*居中*/
+        /*.son {*/
+            /*background: orange;*/
+            /*width: 100px;*/
+            /*height: 100px;*/
+            /*position: absolute;*/
+            /*margin:auto;*/
+            /*top:0;*/
+            /*bottom:0;*/
+            /*left:0;*/
+            /*right:0;*/
+        /*}*/
+        /*左右有值margin*/
+        .son{
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+            margin-right:50px;
+            margin-left:auto;
+        }
+
+        /*.circle{*/
+            /*width:100px;*/
+            /*height:100px;*/
+            /*border-radius: 50%;*/
+            /*padding:10px;*/
+            /*border:10px solid ;*/
+            /*background-color: currentColor;*/
+            /*background-clip: content-box;*/
+        /*}*/
+
+        .dengbian{
+            width:0;
+            border:10px solid;
+            border-color:#f30 transparent transparent;
+        }
+        .dengyao{
+            width:0;
+            border-width:20px 10px;
+            border-style:solid;
+            border-color:#f30 transparent transparent;
+        }
+        .qipao{
+            width:0;
+            border-width:20px 10px;
+            border-style:solid;
+            border-color:#f30 #f30 transparent transparent;
+
+        }
+        .tixing{
+            width:10px;
+            height:10px;
+            border:10px solid;
+            border-color:#f30 transparent transparent;
+        }
+        .xiaoguo{
+            width:10px;
+            height:10px;
+            border:10px solid;
+            border-color:#f30 #00f #396 #0f0;
+        }
+
+        .container{
+            position: fixed;
+            top:0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            background-color: rgba(0,0,0,.5);
+            text-align: center;
+            font-size: 0;
+            white-space: nowrap;
+            overflow: auto;
+        }
+        .container:after{
+            content: '';
+            display: inline-block;
+            height:100%;
+            vertical-align: middle;
+        }
+        .dialog{
+            display: inline-block;
+            vertical-align: middle;
+            border-radius: 6px;
+            background-color: #fff;
+            font-size:14px;
+            white-space: normal;
+        }
+        .content{
+            width:240px;
+            height:120px;
+            padding:20px;
+        }
+
+        .scroll{
+            height:1000px;
+        }
+        html{
+            /*overflow: hidden;*/
+            /*设置之后浏览器的滚动条不见了,但是页面不滚动*/
+        }
+
+
+        .scroll_content::-webkit-scrollbar {
+            width:0px;
+            height:0px;
+        }
+
+
+        .wrapper{
+            display:flex;
+            overflow: hidden;
+        }
+        .scroll_content{
+            width:180px;
+            overflow-x: hidden;
+            background: black;
+            color:#fff;
+
+
+        }
+
+        .right{
+            width:100%;
+            border:1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="wrapper">
+        <div class="scroll_content">
+            谈到“吸底”效果的实现，大家可能较多了解到的是sticky-footer布局，但这个方式大多是用来解决第二种情况的实现。本文将采用以下的三种方案来分别来实现以上这两种效果，并简单实现的原理以及其的适用情况。容器（wrapper）包含两部分，分别是内容（content）和底部需固定的区域。谈到“吸底”效果的实现，大家可能较多了解到的是sticky-footer布局，但这个方式大多是用来解决第二种情况的实现。本文将采用以下的三种方案来分别来实现以上这两种效果，并简单实现的原理以及其的适用情况。 容器（wrapper）包含两部分，分别是内容（content）和底部需固定的区域谈到“吸底”效果的实现，大家可能较多了解到的是sticky-footer布局，但这个方式大多是用来解决第二种情况的实现。本文将采用以下的三种方案来分别来实现以上这两种效果，并简单实现的原理以及其的适用情况。 容器（wrapper）包含两部分，分别是内容（content）和底部需固定的区域,著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。谈到“吸底”效果的实现，大家可能较多了解到的是sticky-footer布局，但这个方式大多是用来解决第二种情况的实现。本文将采用以下的三种方案来分别来实现以上这两种效果，并简单实现的原理以及其的适用情况。 容器（wrapper）包含两部分，分别是内容（content）和底和底部需固定的区域。谈到“吸底”效果的实现，大家可能较多了解到的是sticky-footer布局，但这个方式大多是用来解决第二种情况的实现。本文将采用以下的三种方案来分别来实现以上这两种效果，并简单实现的原理以及其的适用情况。 容器（wrapper）包含两部分，分别是内容（content）和底部需固定的区域谈到“吸底”效果的实现，大家可能较多了解到的是sticky-footer布局，但这个方式大多是用来解决第二种情况的实现。本文将采用以下的三种方案来分别来实现以上这两种效果，并简单实现的原理以及其的适用情况。容器（wrapper）包含两部分，分别是内容（content）和底部需固定的区域,著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。谈到“吸底”效果的实现，大家可能较多了解到的是sticky-footer布局，但这个方式大多是用来解决第二种情况的实现。本文将采用以下的三种方案来分别来实现以上这两种效果，并简单实现的原理以及其的适用情况。 容器（wrapper）包含两部分，分别是内容（content）和底
+        </div>
+        <div class="right">右侧从哪里开始</div>
+    </div>
+
+    <!--三角形-->
+    <!--<div class="dengbian"></div>-->
+    <!--<div class="dengyao"></div>-->
+    <!--<div class="qipao"></div>-->
+    <!--<div class="tixing"></div>-->
+    <!--<div class="xiaoguo"></div>-->
+
+    <!--<div class="container">-->
+        <!--<div class="dialog">-->
+            <!--<div class="content">-->
+                <!--dialog永远居中-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+
+    <!--<div class="scroll">去除滚动条</div>-->
+
+    <!--双层圆点-->
+    <!--<div class="circle"></div>-->
+
+    <!--<div class="father">-->
+        <!--<div class="son"></div>-->
+    <!--</div>-->
+
+    <!--<div class="wrapper">-->
+        <!--我是禁止复制文字-->
+    <!--</div>-->
+    <!--<img src="./base.png" alt="">-->
+    <!--<div class="threeLine"></div>-->
+
+
+</body>
+<script>
+    var wrapper = document.querySelector('.wrapper');
+    var height = window.innerHeight;
+    console.log(height);
+    wrapper.style.height = height + 'px';
+</script>
+</html>
